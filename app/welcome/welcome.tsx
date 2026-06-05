@@ -1,28 +1,28 @@
-import logoLight from "./logo-light.svg";
 import logoDark from "./logo-dark.svg";
+import logoLight from "./logo-light.svg";
 
 export default function Welcome() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white px-6">
-      <div className="flex flex-col items-center w-full max-w-md">
-        
-        <div className="mb-20 mt-20 w-24 h-24">
-          <img src={logoLight} alt="READTalk" className="block w-full h-full dark:hidden" />
-          <img src={logoDark} alt="READTalk" className="hidden w-full h-full dark:block" />
+    <main className="flex items-center justify-center pt-16 pb-4 min-h-screen bg-white px-6">
+      <div className="flex-1 flex flex-col items-center gap-9 w-full max-w-md">
+
+        <div className="w-[500px] max-w-[100vw] p-4">
+          <img src={logoLight} alt="READTalk" className="block w-full dark:hidden" />
+          <img src={logoDark} alt="READTalk" className="hidden w-full dark:block" />
         </div>
 
-        <h1 className="text-3xl text-black font-normal mb-4">
+        <h1 className="text-3xl text-black font-normal">
           Welcome to ReadTalk
         </h1>
 
-        <p className="text-center text-gray-600 text-sm leading-5 mb-8 px-4">
+        <p className="text-center text-gray-600 text-sm leading-5 px-4">
           Read our{" "}
           <span className="text-red-500">Privacy Policy</span>. Tap "Agree and
           continue" to accept our{" "}
           <span className="text-red-500">Terms of Service</span>.
         </p>
 
-        <button className="w-full bg-gray-100 rounded-full py-3.5 mb-4 flex items-center justify-center gap-2">
+        <button className="w-full bg-gray-100 rounded-full py-3.5 flex items-center justify-center gap-2">
           <span className="text-xl">🌐</span>
           <span className="text-black text-base">English</span>
           <span className="text-black text-xs">▼</span>
@@ -34,8 +34,8 @@ export default function Welcome() {
         >
           Agree and continue
         </button>
-        
+
       </div>
-    </div>
+    </main>
   );
 }
