@@ -1,4 +1,3 @@
-import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
 export function Welcome({ message }: { message: string }) {
@@ -11,11 +10,6 @@ export function Welcome({ message }: { message: string }) {
 							src={logoLight}
 							alt="React Router"
 							className="block w-full dark:hidden"
-						/>
-						<img
-							src={logoDark}
-							alt="React Router"
-							className="hidden w-full dark:block"
 						/>
 					</div>
 				</header>
