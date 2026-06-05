@@ -1,10 +1,10 @@
-import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+import logoDark from "./logo-dark.svg";
 
 export default function Welcome() {
   return (
-    <main className="flex items-center justify-center min-h-screen bg-white px-6">
-      <div className="flex-1 flex flex-col items-center w-full max-w-md">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white px-6">
+      <div className="flex flex-col items-center w-full max-w-md">
         
         <div className="mb-20 mt-20 w-24 h-24">
           <img src={logoLight} alt="READTalk" className="block w-full h-full dark:hidden" />
@@ -36,6 +36,6 @@ export default function Welcome() {
         </button>
         
       </div>
-    </main>
+    </div>
   );
 }
