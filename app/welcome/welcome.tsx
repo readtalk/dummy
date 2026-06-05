@@ -1,4 +1,4 @@
-import logoLight from "./logo-light.svg";
+import logo from "./logo.svg";
 
 export function Welcome({ message }: { message: string }) {
 	return (
@@ -7,8 +7,8 @@ export function Welcome({ message }: { message: string }) {
 				<header className="flex flex-col items-center gap-9">
 					<div className="w-[500px] max-w-[100vw] p-4">
 						<img
-							src={logoLight}
-							alt="React Router"
+							src={logo}
+							alt="READTalk"
 							className="block w-full dark:hidden"
 						/>
 					</div>
