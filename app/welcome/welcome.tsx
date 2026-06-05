@@ -47,7 +47,7 @@ export function Welcome() {
           </button>
 
           <button
-            onClick={() => window.location.href = "/resendlist"}
+            onClick={() => window.location.href = "./resendlist"}
             className="w-full bg-[#ff0000] py-4 text-white text-[17px] font-medium active:bg-[#e60000]"
           >
             Agree and continue
