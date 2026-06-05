@@ -1,0 +1,18 @@
+import logoDark from "./assets/logo-dark.svg";
+import logoLight from "./assets/logo-light.svg";
+
+export default function Welcome() {
+  return (
+    <main className="flex items-center justify-center pt-16 pb-4">
+      <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
+        <header className="flex flex-col items-center gap-9">
+          <div className="w-[500px] max-w-[100vw] p-4">
+            <img src={logoLight} alt="READTalk" className="block w-full dark:hidden" />
+            <img src={logoDark} alt="READTalk" className="hidden w-full dark:block" />
+          </div>
+        </header>
+        <button onClick={() => window.location.href = "/resendlist"}>Agree</button>
+      </div>
+    </main>
+  );
+}
