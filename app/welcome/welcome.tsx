@@ -2,38 +2,37 @@ import logo from "./logo.svg";
 
 export function Welcome() {
   return (
-    <main className="flex items-center justify-center pt-16 pb-4 min-h-screen">
-      <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
+    <main className="min-h-screen flex items-center justify-center bg-white dark:bg-[#111b21] px-6">
+      <div className="w-full max-w-[300px] flex flex-col items-center text-center">
 
-        <header className="flex flex-col items-center gap-9">
-          <div className="w-24 h-24">
-            <img src={logo} alt="READTalk" className="block w-full h-full" />
-          </div>
-        </header>
-
-        <div className="max-w-[300px] w-full space-y-6 px-4 text-center">
-          <h1 className="text-2xl font-normal text-gray-900 dark:text-gray-100">
-            Welcome to ReadTalk
-          </h1>
-
-          <p className="text-sm text-gray-600 dark:text-gray-400 leading-5">
-            Read our <a href="#" className="text-red-600">Privacy Policy</a>. Tap "Agree and
-            continue" to accept our <a href="#" className="text-red-600">Terms of Service</a>.
-          </p>
-
-          <button className="w-full bg-gray-100 dark:bg-gray-800 rounded-3xl p-3.5 flex items-center justify-center gap-2 text-gray-900 dark:text-gray-100">
-            <span className="text-xl">🌐</span>
-            <span>English</span>
-            <span className="text-xs">▼</span>
-          </button>
-
-          <button
-            onClick={() => window.location.href = "/resendlist"}
-            className="w-full bg-red-600 rounded-3xl p-4 text-white text-lg font-medium shadow-md shadow-red-600/30 active:bg-red-700"
-          >
-            Agree and continue
-          </button>
+        <div className="w-24 h-24 mb-20 mt-20">
+          <img src={logo} alt="READTalk" className="w-full h-full" />
         </div>
+
+        <h1 className="text-[28px] font-normal text-[#111b21] dark:text-[#e9edef] mb-4">
+          Welcome to ReadTalk
+        </h1>
+
+        <p className="text-[14px] text-[#667781] dark:text-[#8696a0] leading-5 mb-8">
+          Read our <a href="#" className="text-[#ff0000]">Privacy Policy</a>. Tap "Agree and
+          continue" to accept our <a href="#" className="text-[#ff0000]">Terms of Service</a>.
+        </p>
+
+        <button className="w-full bg-[#f0f0f0] dark:bg-[#2a3942] rounded-full py-3.5 mb-4 flex items-center justify-center gap-2 text-[#111b21] dark:text-[#e9edef] text-base">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="stroke-[#0096ff]">
+            <circle cx="12" cy="12" r="10" strokeWidth="1.5"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 0 0 1 4-10z" strokeWidth="1.5"/>
+          </svg>
+          <span>English</span>
+          <span className="text-xs">▼</span>
+        </button>
+
+        <button
+          onClick={() => window.location.href = "/resendlist"}
+          className="w-full bg-[#ff0000] rounded-full py-4 text-white text-lg font-medium shadow-[0_2px_6px_rgba(255,0,0,0.3)] active:bg-[#e60000]"
+        >
+          Agree and continue
+        </button>
 
       </div>
     </main>
