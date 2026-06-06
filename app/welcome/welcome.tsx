@@ -23,7 +23,7 @@ export function Welcome() {
       <div className="min-h-screen flex flex-col items-center justify-center px-8">
         <div className="w-full max-w-[328px] flex flex-col items-center text-center">
 
-          <div className="w-[152px] h-[152px] mb-[72px]">
+          <div className="w-[152px] h-[152px] mb-[64px]">
             <img src={logo} alt="READTalk" className="w-full h-full" />
           </div>
 
@@ -31,14 +31,14 @@ export function Welcome() {
             Welcome to READTalk
           </h1>
 
-          <p className="text-[15px] leading-[22px] text-[#5f6368] mb-[32px]">
+          <p className="text-[14px] leading-[20px] text-[#5f6368] mb-[32px]">
             Read our <a href="#" className="text-[#1a73e8] font-medium">Privacy Policies</a>. Tap "Agree and continue" to accept our <a href="#" className="text-[#1a73e8] font-medium">Terms of Service</a>.
           </p>
 
-          <button className="bg-[#f1f3f4] rounded-full px-[20px] py-[10px] mb-[24px] flex items-center gap-[8px] text-[#202124] text-[15px]">
+          <button className="bg-[#f1f3f4] rounded-full px-[20px] py-[10px] mb-[24px] flex items-center gap-[8px] text-[#202124] text-[14px]">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
               <circle cx="12" cy="12" r="10"/>
-              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 0 0 1 4-10z"/>
             </svg>
             <span>English</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -48,7 +48,7 @@ export function Welcome() {
 
           <button
             onClick={() => window.location.href = "/resendlist"}
-            className="w-full bg-[#ff0000] py-[14px] text-white text-[16px] font-medium tracking-[0.3px] active:bg-[#e60000]"
+            className="w-full bg-[#ff0000] py-[16px] text-white text-[16px] font-medium tracking-[0.3px] active:bg-[#e60000]"
           >
             Agree and continue
           </button>
