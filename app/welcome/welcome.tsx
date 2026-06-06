@@ -2,50 +2,44 @@ import logo from "./logo.svg";
 
 export function Welcome() {
   return (
-    <main
-      className="h-[100dvh] bg-white flex flex-col items-center justify-center px-4"
-      style={{
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-        color: '#111b21'
-      }}
-    >
-      <div className="w-full max-w-[360px] md:max-w-[600px] flex flex-col items-center text-center">
+    <main className="h-[100dvh] bg-[#f7f8fa] flex flex-col items-center justify-center px-5 font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,sans-serif]">
+      <div className="w-full max-w-[330px] flex flex-col items-center text-center">
 
-        {/* LOGO 80px kayak.app-empty-icon + FLIP */}
+        {/* LOGO 140px - SESUAI SCREENSHOT */}
         <div
-          className="w- h- mb- animate-[flip_3s_linear_infinite]"
+          className="w-[140px] h-[140px] mb-8 animate-[flip_3s_linear_infinite]"
           style={{ perspective: '1000px' }}
         >
           <img src={logo} alt="READTalk" className="w-full h-full" />
         </div>
 
-        {/* H1 pake style.app-header-title: 27px 600 */}
-        <h1 className="text- font-semibold text-[#111b21] mb-[6px] tracking-[-0.5px]">
+        {/* H1: 16px font-medium - BUKAN 27px */}
+        <h1 className="text-base font-medium text-[#111b21] mb-2">
           Welcome to READTalk
         </h1>
 
-        {/* P: 15px kayak.app-search-input +.app-empty-text */}
-        <p className="text- leading- text-[#667781] mb- md:whitespace-nowrap">
+        {/* P: 14px #667781, WRAP DI HP - LINK MERAH */}
+        <p className="text-sm leading-[20px] text-[#667781] mb-6">
           Read our <a href="#" className="text-[#ff0000] font-medium">Privacy Policies</a>. Tap "Agree and continue" to accept our <a href="#" className="text-[#ff0000] font-medium">Terms of Service</a>.
         </p>
 
-        {/* BUTTON ENGLISH: pake style search-box */}
-        <button className="bg-[#f0f0f0] rounded-[24px] px-[24px] py-[12px] mb- flex items-center gap-[8px] text-[#111b21] text-">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.5">
+        {/* BUTTON ENGLISH: 36px tinggi, bg #f0f0f0 */}
+        <button className="h-9 bg-[#f0f0f0] rounded-full px-5 mb-4 flex items-center gap-2 text-[15px] text-[#111b21]">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="opacity-60">
             <circle cx="12" cy="12" r="10"/>
-            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 0 0 1-4 10 15.3 0 0 1-4-10 15.3 0 0 1 4-10z"/>
+            <path d="M2 12h20M12 2a15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
           <span>English</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" opacity="0.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="opacity-60">
             <path d="M7 10l5 5 5-5z"/>
           </svg>
         </button>
 
-        {/* BUTTON MERAH: pake style.app-fab */}
+        {/* BUTTON MERAH: 48px tinggi, radius 24px */}
         <button
           onClick={() => window.location.href = "/resendlist"}
-          className="w-full max-w-[360px] bg-[#ff0000] py- text-white text- font-medium rounded-[16px]"
-          style={{ boxShadow: '0 2px 6px rgba(0,0,0,0.3)' }}
+          className="w-full h-12 bg-[#ff0000] text-white text-[15px] font-medium rounded-3xl active:bg-[#e60000]"
+          style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.2)' }}
         >
           Agree and continue
         </button>
