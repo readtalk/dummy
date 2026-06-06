@@ -2,63 +2,56 @@ import logo from "./logo.svg";
 
 export function Welcome() {
   return (
-    <main className="min-h-screen bg-[#f6f6f6] relative">
-      {/* Icon 3 titik */}
-      <button className="absolute top- right-">
-        <svg width="4" height="18" viewBox="0 0 4 18" fill="#0c1317">
-          <circle cx="2" cy="3" r="1.5"/>
-          <circle cx="2" cy="9" r="1.5"/>
-          <circle cx="2" cy="15" r="1.5"/>
-        </svg>
-      </button>
+    <main className="min-h-screen bg-[#f7f8fa]">
+      <div className="min-h-screen flex flex-col items-center justify-center px-4">
+        <div className="w-full max-w-[300px] flex flex-col items-center text-center">
 
-      {/* Icon accessibility */}
-      <button className="absolute top- right- w- h- border border-[#dadce0] rounded-full bg-white flex items-center justify-center">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00a884" strokeWidth="2.2" strokeLinecap="round">
-          <circle cx="12" cy="12" r="9"/>
-          <path d="M12 15v-4M12 9h.01"/>
-        </svg>
-      </button>
-
-      <div className="min-h-screen flex flex-col items-center justify-center px-">
-        <div className="w-full max-w-[328px] flex flex-col items-center text-center">
-
-          {/* LOGO MUTER 360° 3s */}
-          <div className="w-[152px] h-[152px] mb- animate-[spin_3s_linear_infinite]">
+          {/* LOGO 100px + FLIP 360° 3s */}
+          <div
+            className="w-[100px] h-[100px] mb-[36px] animate-[flip_3s_linear_infinite]"
+            style={{ perspective: '1000px' }}
+          >
             <img src={logo} alt="READTalk" className="w-full h-full" />
           </div>
 
-          <h1 className="text- leading- font-normal text-[#0c1317] mb-">
+          {/* H1 18px */}
+          <h1 className="text- leading- font-normal text-[#111b21] mb-[8px]">
             Welcome to READTalk
           </h1>
 
-          {/* TULISAN 1 BARIS - NO WRAP */}
-          <p className="text- leading- text-[#5f6368] mb- whitespace-nowrap">
-            Read our <a href="#" className="text-[#1a73e8] font-medium">Privacy Policies</a>. Tap "Agree and continue" to accept our <a href="#" className="text-[#1a73e8] font-medium">Terms of Service</a>.
+          {/* P 13px 1 BARIS - WHITESPACE-NOWRAP */}
+          <p className="text- leading- text-[#667781] mb- whitespace-nowrap">
+            Read our <a href="#" className="text-[#0056b3]">Privacy Policies</a>. Tap "Agree and continue" to accept our <a href="#" className="text-[#0056b3]">Terms of Service</a>.
           </p>
 
-          {/* BUTTON LEBAR PAS KONTEN - GA FULL */}
-          <button className="bg-[#f1f3f4] rounded-full px- py- mb- flex items-center gap-[8px] text-[#202124] text-">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+          {/* BUTTON ENGLISH W-AUTO BUKAN W-FULL */}
+          <button className="bg-[#f0f0f0] rounded-full px-[20px] py-[7px] mb- flex items-center gap-[6px] text-[#111b21] text-">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0096ff" strokeWidth="1.5">
               <circle cx="12" cy="12" r="10"/>
-              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 0 0 1 4-10z"/>
             </svg>
             <span>English</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7 10l5 5 5-5z"/>
-            </svg>
+            <span className="text-">▼</span>
           </button>
 
-          {/* BUTTON MERAH FULL WIDTH TAPI ADA PADDING LUAR */}
+          {/* BUTTON MERAH FULL 300px */}
           <button
             onClick={() => window.location.href = "/resendlist"}
-            className="w-full bg-[#ff0000] py- text-white text- font-medium tracking-[0.3px] active:bg-[#e60000]"
+            className="w-full bg-[#ff0000] py-[10px] text-white text- font-medium"
           >
             Agree and continue
           </button>
 
         </div>
       </div>
+
+      {/* KEYFRAMES FLIP */}
+      <style jsx>{`
+        @keyframes flip {
+          0% { transform: rotateY(0deg); }
+          100% { transform: rotateY(360deg); }
+        }
+      `}</style>
     </main>
   );
 }
