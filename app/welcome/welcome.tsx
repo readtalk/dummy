@@ -1,5 +1,4 @@
 import logo from "./logo.svg";
-import "./resendlist.tsx";
 
 export function Welcome() {
   return (
@@ -38,7 +37,7 @@ export function Welcome() {
 
         {/* BUTTON MERAH: 48px tinggi, radius 24px */}
         <button
-          onClick={() => window.location.href = "/resendlist"}
+          onClick={() => window.location.href = "./resendlist"}
           className="w-full h-12 bg-[#ff0000] text-white text-[15px] font-medium rounded-3xl active:bg-[#e60000]"
           style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.2)' }}
         >
