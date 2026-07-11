@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import "./resendlist.tsx";
 
 export function Welcome() {
   return (
