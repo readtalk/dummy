@@ -7,7 +7,7 @@ import BubbleDiscussionIcon from "./assets/bubble-discussion.svg";
 import CameraIcon from "./assets/at.svg";
 import UsersIcon from "./assets/users.svg";
 import PhoneCallIcon from "./assets/phone-call.svg";
-import "./resendlist.css";
+import "./resendlist.tsx";
 
 export default function ResendList() {
   const [userId, setUserId] = useState("");
